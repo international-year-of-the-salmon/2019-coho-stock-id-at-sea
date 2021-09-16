@@ -1,0 +1,66 @@
+At-Sea Salmon Genetic Stock ID by SNP Sequencing Protocols from the 2019 Gulf of Alaska International Year of the Salmon Expedition
+
+On-board infrastructure requirements:
+•Workplace:
+	oBench top: Stainless steel or similar surface for easy cleaning, 100cm x 50cm or larger,
+	oSufficiently separate from other biological sample processing to avoid cross contamination. E.g. in separate room from catch preparation
+•Power supply:
+	oPower for PCR cycler (100-240 Volt, 60/50 Hz)
+	oPower for Laptop and minION sequencer (100-240V, 60/50 Hz)
+	oPower for microcentrifuge (100-240 Volt, 60/50 Hz)
+	oPower for vortex genie 2 (100-240 Volt, 60/50 Hz)
+•Ice (clean)
+ 
+Equipment:
+•PCR cycler
+•Microcentrifuge
+•Vortex genie 2
+•Laptop
+•External hard drive
+•Minion sequencer and several chips 
+•Scalpel for tissue homogenization
+•Consumables
+	oKits: End prep kit, Ligation kit, PCR materials, Gibson assembly kit, DNA extraction, Ampure XT beads, ONT barcodes, ONT library preparation kit
+	oTips (2ul, 20ul, 200ul, 1000ul), Tubes (), plates
+	oGloves
+•Pipettes (2ul, 20ul, 200ul, 1000ul)
+•Magnet for beads
+ 
+Sample Preparation:
+1.Acquire fin-clip tissue samples from Chinook or Coho salmon and homogenize by knife
+2.Extract DNA using Quickextract kit
+	a.Incubate sample in extraction buffer for 10 min @65°C 
+	b.Incubate for 2 min @ 98°C 
+	c.collect supernatant
+3.Perform multiplex SNP hotspot PCR
+4.Bead cleanup
+5.Add fish ID barcodes
+	a.End prep using Ultra™ II End Repair/dA-Tailing Module
+	b.Barcode ligation
+6.Barcode amplification PCR
+7.Bead cleanup
+8.Add ligation adapter
+	a.End prep using Ultra™ II End Repair/dA-Tailing Module
+	b.Adapter ligation
+9.Bead cleanup
+10.Concatenation reaction
+	a.Gibson assembly incubation
+	b.Gap-filling PCR
+11.Bead cleanup
+
+Amplicon Sequencing:
+1.Sequencing adapter ligation
+	a.End prep using Ultra™ II End Repair/dA-Tailing Module
+	b.Barcode ligation
+2.Bead cleanup
+3.ONT library preparation
+	a.Sequencing adapter ligation 
+4.MinION sequencing
+                       
+Sequence analysis:
+1.Base calling using Albacore
+2.Quality control using facstQC
+3.Demultiplexing and adapter trimming by cutadapt
+4.Reference alignment by minimap
+5.SNP calling using samtools2/nanopolish/
+6.Stock ID by rubias
